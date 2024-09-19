@@ -1,343 +1,148 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swift-Coinvault</title>
-</head>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <script src="https://kit.fontawesome.com/513feb5ba8.js" crossorigin="anonymous"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-  {
-  "symbols": [
-    {
-      "description": "",
-      "proName": "BINANCE:BTCUSDT"
-    },
-    {
-      "description": "",
-      "proName": "BINANCE:ETHUSDT"
-    },
-    {
-      "description": "",
-      "proName": "BINANCE:SOLUSDT"
-    },
-    {
-      "description": "",
-      "proName": "BINANCE:ETHUSDT"
-    },
-    {
-      "description": "",
-      "proName": "BINANCE:BNBUSDT"
-    },
-    {
-      "description": "",
-      "proName": "BINANCE:DOGEUSDT"
-    },
-    {
-      "description": "",
-      "proName": "BINANCE:SUIUSDT"
-    },
-    {
-      "description": "",
-      "proName": "BINANCE:XRPUSDT"
-    },
-    {
-      "description": "",
-      "proName": "BINANCE:PEPEUSDT"
-    },
-    {
-      "description": "",
-      "proName": "BINANCE:NEARUSDT"
-    },
-    {
-      "description": "",
-      "proName": "BINANCE:LINKUSDT"
-    },
-    {
-      "description": "",
-      "proName": "BINANCE:ADAUSDT"
-    },
-    {
-      "description": "",
-      "proName": "BINANCE:SHIBUSDT"
-    },
-    {
-      "description": "",
-      "proName": "BINANCE:BCHUSDT"
-    },
-    {
-      "description": "",
-      "proName": "BINANCE:TRXUSDT"
-    },
-    {
-      "description": "",
-      "proName": "BINANCE:LTCUSDT"
-    }
-  ],
-  "showSymbolLogo": true,
-  "isTransparent": true,
-  "displayMode": "adaptive",
-  "colorTheme": "light",
-  "locale": "in"
-}
-  </script>
-</div>
-<!-- TradingView Widget END -->
-<nav>
-  <ul class="sidebar">
-    <li onclick="hidesidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-    <li><a href="#">HOME</a></li>
-    <li><a href="About us/">ABOUT</a></li>
-    <li><a href="#">CONTACT</a></li>
-    <li><a href="auth/">LOGIN</a></li>
-  </ul>
-    <ul>
-    <li><a href="#">SWIFT-COINVAULT</a></li>
-    <li class="hideonmobile"><a href="#">HOME</a></li>
-    <li class="hideonmobile"><a href="#">CONTACT</a></li>
-    <li class="hideonmobile"><a href="About us/">ABOUT</a></li>
-    <li class="hideonmobile"><a href="auth/">LOGIN</a></li>
-    <li onclick="showsidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
-  </ul>
-</nav>
+    <link rel="stylesheet" href="style.css">
+    <title>Swift-coinvault | Login & Registration</title>
+</head>
+<body>
+ <div class="wrapper">
+    <nav class="nav">
+        <div class="nav-logo">
+            <p>Swift-coinvault</p>
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="#" class="link active">Home</a></li>
+                <li><a href="#" class="link">Services</a></li>
+                <li><a href="#" class="link">About</a></li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+            <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+
+<!----------------------------- Form box ----------------------------------->    
+    <div class="form-box">
+        
+        <!------------------- login form -------------------------->
+
+        <div class="login-container" id="login">
+            <div class="top">
+                <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
+                <header>Login</header>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Username or Email">
+                <i class="bx bx-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Password">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Sign In">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="login-check">
+                    <label for="login-check"> Remember Me</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Forgot password?</a></label>
+                </div>
+            </div>
+        </div>
+
+        <!------------------- registration form -------------------------->
+        <div class="register-container" id="register">
+            <div class="top">
+                <span>Have an account? <a href="#" onclick="login()">Login</a></span>
+                <header>Sign Up</header>
+            </div>
+            <div class="two-forms">
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Firstname">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Lastname">
+                    <i class="bx bx-user"></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Email">
+                <i class="bx bx-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Password">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Register">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="register-check">
+                    <label for="register-check"> Remember Me</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Terms & conditions</a></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>   
+
 
 <script>
-  function showsidebar(){
-    const sidebar = document.querySelector('.sidebar')
-    sidebar.style.display = 'flex'
-  }
-  function hidesidebar(){
-    const sidebar = document.querySelector('.sidebar')
-    sidebar.style.display = 'none'
-  }
+   
+   function myMenuFunction() {
+    var i = document.getElementById("navMenu");
+
+    if(i.className === "nav-menu") {
+        i.className += " responsive";
+    } else {
+        i.className = "nav-menu";
+    }
+   }
+ 
 </script>
 
-  <video loop autoplay muted class="background-video">
-    <source src="3130284-uhd_3840_2160_30fps.mp4" type="video/mp4">
-  </video>
-  <div class="text-box">
-    <h1>The World's Leading Crypto Wallet</h1>
-    <br>
-    <h2>Highly-Efficient, Flexible, Diverse, Stable & Secure</h2>
-    <br>
-    <p>Safe And Transparent, The Decentralized Wallet That Puts Your Data & Assects In Your Own Hand.</p>
-    <p>Efficient Cross-Chain Trading Enabled To Make Hot Nfts/Token Within Reach.</p>
-    <p>Dapps Across Multiple Networks Through Our Webs Dapp Browser.</p>
-    <p>Buy Bitcoin And Other Cryptocurrences In Under 5(Five) Minutes.</p>
-    <p>Exchange Your Crypto Without Leaving The App.</p>
-    <p>Keep Your Crypto Safe From Hackers And Scammers.</p>
-    <a href="About us/" class="Hero-btn">Visit Us To Know More.</a>
-  </div>
-</section>
+<script>
 
-<!----PORTFOLIO-->
+    var a = document.getElementById("loginBtn");
+    var b = document.getElementById("registerBtn");
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
 
-<section class="Portfolio">
-  <h1>PORTFOLIO</h1>
-  <br>
-  <h2>Welcome To SWIFT-COINVAULT</h2>
-<br>  
-  <p>At Swift-Coinvault.com, we're revolutionizing the way you buy,sell, and store Cryptocurrences.<br>Our cutting-edge platform and secure mobile app makes it easy to manage your digital asserts,<br>anytime,anywhere</p>
+    function login() {
+        x.style.left = "4px";
+        y.style.right = "-520px";
+        a.className += " white-btn";
+        b.className = "btn";
+        x.style.opacity = 1;
+        y.style.opacity = 0;
+    }
 
-  <div class="row">
-    <div class="Portfolio-col">
-      <h3>Our Expertise</h3>
-      <p>Cryptocurrences Trading: Buy and sell popular Cryptocurrences like Bitcoin, Ethereum, and more.<br>Secure Storage: Store your digital asserts safely in our mobile app,protected by advance security measures.<br>User-Friendly Interface: Easily navigate our platform and app,designed for both beginners and experienced traders.<br>Reliable Support: Get help when you need it from our dedicated customer support team</p>
-    </div>
-    <div class="Portfolio-col">
-      <h3>Our Mission</h3>
-      <p>Our mission is to empower indivduals to take control of thier Cryptocurrency Investments,providing a seamless and secure experince.<br> We strive to innovate and improve our services,staying ahead of the curve in the ever-evolving Crypto landscape</p>
-    </div>
-    <div class="Portfolio-col">
-      <h3>What Sets Us Apart</h3>
-      <p>Competitive Prcing: Get the best rates for your Cryptocurrency tardes.<br>Adavanced Security: Our robust security measures ensure your assets are protected.<br>Mobile Convenience: Store and manage your Cryptocurrency on-the-go with our mobile app</p>
-    </div>
-</section>
+    function register() {
+        x.style.left = "-510px";
+        y.style.right = "5px";
+        a.className = "btn";
+        b.className += " white-btn";
+        x.style.opacity = 0;
+        y.style.opacity = 1;
+    }
 
-<!---- End of PORTFOLIO-->
-
-
-
-<!-----testimonial-->
-
-<section class="testimonials">
-  <h2>What Our Users Say</h2>
-  <p>Don't just take our words for it! Our users rave about our platform's ease of use, security, and customer support.</p>
-  <div class="row">
-    <div class="testimonial-col">
-      <div class="text-wrapper">
-      <p>Swift-Coinvault has been a game-changer for me.<br>The trading tools and analytics are top-notch, and the support team is always responsive</p>
-      <h3>Emily K.</h3>
-      </div>
-      <img src="user1.jpg" alt="User 1">
-      </div>
-    <div class="testimonial-col">
-      <div class="text-wrapper">
-      <p>Swift-Coinvault has helped me grow my Cryptocurrency Portfolio significantly.<br>The insights and analysis tools are invaluable, and the community is supportive and knowledgeable.</p>
-      <h3>James B.</h3>
-      </div>
-      <img src="user2.jpg" alt="User 2">
-    </div>
-  </div>
-</section>
-
-<!------end of testimonial-->
-
-<!----Main contnt section-->
-
-<main>
-  <section id="team">
-    <h1>Meet Our Team</h1>
-    <div class="team-members">
-      <div class="team-member">
-        <img src="team-9.jpg" alt="Team Member 1">
-        <h2>Kenny Doe</h2>
-        <p>Founder & CEO</p>
-      </div>
-      <div class="team-member">
-        <img src="shipman-northcutt-sgZX15Da8YE-unsplash.jpg" alt="Team-Member 2">
-        <h2>Andy Sant</h2>
-        <p>Co-founder & CTO</p>
-      </div>
-      <div class="team-member">
-        <img src="co-founder.jpg" alt="Team-Member 3">
-        <h2>Bob Johnson</h2>
-        <p>Project Manager</p>
-      </div>
-      <div class="team-member">
-        <img src="leadproduct.jpg" alt="Team-Member 4">
-        <h2>Smith Felix</h2>
-        <p>Marketing Officer</p>
-  </section>
-  <section id="login">
-    <!----login content-->
-  </section>
-  <section id="faq">
-    <h1>Frequently Asked Questions</h1>
-    <div class="faq-container">
-      <div class="faq-question">
-        <h2>What does Swift-Coinvault wallet work?</h2>
-        <div class="faq-answer">
-          <p>A cryptocurrency wallet is a device or program that stores your cryptocurrency keys and allows you to access your coins. Wallets contain a public key (the wallet address) and your private keys needed to sign cryptocurrency transactions.</p>
-        </div>
-      </div>
-      <div class="faq-question">
-        <h2>Is it safer to keep cryptocurrency in a wallet?</h2>
-        <div class="faq-answer">
-          <p>If you're only looking to hold a coins, an account with Swift-coinvault is the safest and most convenient option for storing your cryptocurrency.</p>
-        </div>
-      </div>
-      <div class="faq-question">
-        <h2>Can i cashout from Swift-Coinvault crypto wallet?</h2>
-        <div class="faq-answer">
-          <p>You can easily withdraw your coins from Swiftstem. There's no limit on the amount of crypto you can withdraw.</p>
-        </div>
-      </div>
-      <div class="faq-question">
-        <h2>What happens when you transfer crypto to a wallet?</h2>
-        <div class="faq-answer">
-          <p>The coins exist on a blockchain and the wallet software allows you to interact with the balances held on that blockchain. The wallet itself stores addresses and allows their owners to move coins elsewhere while also letting others see the balance held at any given address.</p>
-        </div>
-      </div>
-      <div class="faq-question">
-        <h2>Are there any restriction that involve a minimum or maximum limit?</h2>
-        <div class="faq-answer">
-          <p>No. There is no restrictions on the minimum or a maximum transaction limit you can send or receive.</p>
-  </section>
-  <section id="about-us">
-    <h1>ABOUT US</h1>
-  <p>Swift-Coinvault is a cutting-edge Cryptocurrency platform and mobile app designedto make buying,selling,and storing digital assets easy and secure.<br>Our mission is to empower indivduals to take controlof thier Cryptocurrency Investments, providing a seamless and secure experince</p>
-  <div class="roll">
-    <div class="roll-col">
-      <h3>OUR STORY</h3>
-      <p>Founded in 2020, Swift-Coinvault was born out of a passion for innovation and a commitment to making Cryptocurrency accessible to everyone.<br>Our team of experts has years of experince in the Crypto space,and we're dedicated to providing the best possible experince for our users.</p>
-    </div>
-    <div class="roll-col">
-      <h3>OUR VALUES</h3>
-      <p>Innovation: We stay ahead of the curve,continuously improving our services and features.<br>Security: We prioritize the safety and security of our users' asserts.<br>User-Centric: We design our platform and app with our users in mind,ensuring a seamless experince.<br>Transparency: We're open and honest in our communication, ensuring trust with our users.</p>
-    </div>
-    </div>
-  </section>
-  <section id="signup">
-    <!--signup conent here-->
-  </section>
-</section>
-</main>
-<!--new section-->
-
-<div class="new-section">
-  <div class="header-content">
-  <h1>All your crypto and NFTs in one place</h1>
-  <h3>With Cryptor Trade, you can be sure your trading skills are matched with excellent service.</h3>
-  </div>
-  <!---img tags-->
-  <div class="image-gallery">
-    <ul>
-      <li><img src="kucoin.png" alt="image 1"></li>
-      <li><img src="auroracoin.png" alt="image 2"></li>
-      <li><img src="avalanche.png" alt="image 3"></li>
-      <li><img src="binance.png" alt="image 4"></li>
-      <li><img src="bitcoin-cash.png" alt="image 5"></li>
-      <li><img src="bitcoin.png" alt="image 6"></li>
-      <li><img src="bittorrent.png" alt="image 7"></li>
-      <li><img src="blocknet (1).png" alt="image 8"></li>
-      <li><img src="coinye.png" alt="image 9"></li>
-      <li><img src="ethereum.png" alt="image 10"></li>
-      <li><img src="litecoin.png" alt="image 11"></li>
-      <li><img src="monero.png" alt="image 12"></li>
-      <li><img src="potcoin.png" alt="image 13"></li>
-      <li><img src="primecoin.png" alt="image 14"></li>
-      <li><img src="zcash.png" alt="image 15"></li>
-    </ul>
-  </div>
-  <!---h3, h2,ptag, and img here-->
-    <div class="text-content">
-      <h3>& More</h3>
-    <h2>Convert Currencies</h2>
-    <p>the current & historical conversion rates between cryptocurrencies and fiat</p>
-    <h2>Buy, sell, and trade on the go</h2>
-    <p>Manage your holdings from your mobile device</p>
-    <h2>Take control of your wealth</h2>
-    <p>Rest assured you (and only you) have access to your funds</p>
-    </div>
-    <div class="containerr">
-      <div class="footer-contents">
-        <img src="wc2.png" alt="image">
-      </div>
-  </div>
-
-  <footer>
-    <div class="FOOTER-CONTAINER">
-      <div class="language-select">
-        <select id="language-switcher">
-          <option value="en">English</option>
-          <option value="es">Spanish</option>
-          <option value="fr">French</option>
-        </select>
-      </div>
-      <div class="newsletter-signup">
-        <h3>Newsletter</h3>
-        <P class="newsletter-p">Receive exclusive content,early access and special offers by subscribing to our newsletter!</P>
-        <input type="email" placeholder="Enter your email">
-        <button>Subscribe</button>
-      </div>
-      <div class="telegram-icon">
-        <a href="https://t.me/Swiftcoinvault" target="_blank"><i class="fa-brands fa-telegram"></i></a>
-      </div>
-    </div>
-  </footer>
-
-<!--last page-->
-
-
-    
+</script>
 
 </body>
 </html>

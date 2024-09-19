@@ -3,466 +3,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
+    <title>Admin</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="buy.css">
-    <link rel="stylesheet" href="settings.css">
-    <link rel="stylesheet" href="Card.css">
-    <link rel="stylesheet" href="pop.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>main user dashborrd</title>
 </head>
 <body>
-    <div class="dashboard">
-        <nav>
-            <div class="menu-icon" onclick="toggleAside()"><span class="material-symbols-outlined">menu</span></div>
-            <div class="company-name">Swift-Coinvault</div>
-            <div class="profile">
-                <img src="1.jpg" alt="Profile Picture">
-            </div>
-        </div>
-        </nav>
-        <aside id="aside">
-            <div class="close-icon" onclick="toggleAside()"><span class="material-symbols-outlined">close</span></div>
-            <nav>
-                <ul>
-                <li><a href="#" class="active"><span class="material-symbols-outlined">dashboard</span> Dashboard</a></li>
-                <li><a href="Transfer/"><span class="material-symbols-outlined">sync_alt</span> Transfer</a></li>
-                <li><a href="#"><span class="material-symbols-outlined">link</span> Wallet Connet</a></li>
-                <li><a href="#" id="open-card-page"><span class="material-symbols-outlined">credit_card</span> Card</a></li>
-                <li><a href="#" id="buy-button"><span class="material-symbols-outlined">shopping_cart</span> Buy</a></li>
-                <li><a href="#" id="settings-link"><span class="material-symbols-outlined">settings</span> Settings</a></li>
-                <li><a href="#"><span class="material-symbols-outlined">logout</span> Logout</a></li>
-                </ul>
-            </nav>
-            <div class="updates"><span class="material-symbols-outlined">update</span>
-                <h4>Updates Available</h4>
-                <p>Security Updates</p>
-                <p>General Updates</p>
-                <a href="#">Update Now</a>
-                </div>
-        </aside>
-        <main>
-            <section class="account-details">
-                <h2>Account Details</h2>
-                <div class="account-balance">
-                    <p>Account Balance:$<span>0.00</span></p>
-                    <button><span class="material-symbols-outlined">add_box</span></button>
-                </div>
-                <div class="icons">
-                    <div class="icon-container">
-                        <div class="icon-stack ">
-                    <a href="Transfer/"><span class="material-symbols-outlined">sync_alt</span></a>
-                    <h2>Transfer</h2>
-                </div>
-                    <div class="icon-stack">
-                    <a href="#"><span class="material-symbols-outlined">link</span></a>
-                    <h2>Wallet Connet</h2>
-                </div>
-                    <div class="icon-stack">
-                    <a href="#" d="open-card-page"><span class="material-symbols-outlined">credit_card</span></a>
-                    <h2>Card</h2>
-                </div>
-                    <div class="icon-stack">
-                    <a id="buy-link" href="#"><span class="material-symbols-outlined">shopping_cart</span></a>
-                    <h2>Buy</h2>
-                </div>
-                </div>
-            </div>
-            </section>
-            <section class="account-info">
-              <div class="huh">
-                <p>Account ID: <span>12345678</span></p>
-                <p>Last Login: <span>2024-09-13 14:30:00</span></p>
-              </div>
-                <p>Income: $<span>1000.00</span></p>
-                <p>Expenses: $<span>$500.00</span></p>
-            </section>
-            <div class="transaction">
-                <div><h2>Transactions</h2></div>
-                <div class="cryptocurrency-list">
-                    <div class="cryptocurrency">
-                        <div class="left-side">
-                            <img src="btc.png" alt="Bitcoin Logo">
-                            <p>Bitcoin</p>
-                            <P>$10,000</P>
-                        </div>
-                        <div class="righr-side">
-                            <p>$100</p>
-                            <p>0.000</p>
-                        </div>
-                    </div>
-                    <div class="cryptocurrency-list">
-                        <div class="cryptocurrency">
-                            <div class="left-side">
-                                <img src="eth.png" alt="Eth Logo">
-                                <p>Etherum</p>
-                                <P>$10,000</P>
-                            </div>
-                            <div class="righr-side">
-                                <p>$100</p>
-                                <p>0.000</p>
-                            </div>
-                        </div>
-                        <div class="cryptocurrency-list">
-                            <div class="cryptocurrency">
-                                <div class="left-side">
-                                    <img src="usdt.png" alt="Usdt Logo">
-                                    <p>USDT</p>
-                                    <P>$10,000</P>
-                                </div>
-                                <div class="righr-side">
-                                    <p>$100</p>
-                                    <p>0.000</p>
-                                </div>
-                            </div>
-                            <div class="cryptocurrency-list">
-                                <div class="cryptocurrency">
-                                    <div class="left-side">
-                                        <img src="bnb.png" alt="BNB Logo">
-                                        <p>BNB</p>
-                                        <P>$10,000</P>
-                                    </div>
-                                    <div class="righr-side">
-                                        <p>$100</p>
-                                        <p>0.000</p>
-                                    </div>
-                                </div>
-                                <div class="cryptocurrency-list">
-                                    <div class="cryptocurrency">
-                                        <div class="left-side">
-                                            <img src="Aave.jpg" alt="Aave Logo">
-                                            <p>Aave</p>
-                                            <P>$10,000</P>
-                                        </div>
-                                        <div class="righr-side">
-                                            <p>$100</p>
-                                            <p>0.000</p>
-                                        </div>
-                                    </div>
-                                    <div class="cryptocurrency-list">
-                                        <div class="cryptocurrency">
-                                            <div class="left-side">
-                                                <img src="avalanche-2.png" alt="avalanche-2 Logo">
-                                                <p>avalanche</p>
-                                                <P>$10,000</P>
-                                            </div>
-                                            <div class="righr-side">
-                                                <p>$100</p>
-                                                <p>0.000</p>
-                                            </div>
-                                        </div>
-                        </div>
-                    </div>
-                </div>
-        </main>
-        <footer>
-            <div class="footer-info">
-                <h2>&copy; 2024 Swift-Coinvault .org</h2>
-                <p>All rights reserved.</p>
-                <p>Todays date: <span id="current-date"></span></p>
-            </div>
-        </footer>
-        <div class="appBottomMenu">
-            <a href="Transfer/" class="item">
-            <div class="col">
-                <span class="material-symbols-outlined">sync_alt</span>
-                <h2>Transfer</h2>
-            </div>
-                <a href="#" class="item">
-                    <div class="col">
-                        <span class="material-symbols-outlined">credit_card</span>
-                        <h2>Card</h2>
-                    </div>
-                    <a href="#" class="item">
-                        <div class="col">
-                            <span class="material-symbols-outlined">shopping_cart</span>
-                            <h2>Buy</h2>
-                        </div>
-                        <a href="#"  class="item">
-                            <div class="col">
-                                <span class="material-symbols-outlined">settings</span>
-                                <h2>Settings</h2>
-                            </div>
-                            <!--SETTING PAGE CONTENT (hidden by default)-->
-                            <button id="settings-button"></button>
-                            <div id="settings-page" style="display: none;">
-                                <h2>Settings</h2>
-                                <section id="profile-picture">
-                                    <label> Profile Picture</label>
-                                    <input type="file" accept="image/">
-                                </section>
-                                <section id="notification">
-                                    <label>Notifications <span class="material-symbols-outlined">notifications</span></label>
-                                    <div>
-                                        <input type="checkbox">Email notifications
-                                        <input type="checkbox">Push notifications
-                                    </div>
-                                </section>
-                                <section id="profile-settings">
-                                    <label>Change Name</label>
-                                    <input type="text" placeholder="New name">
-                                    <label>Update Email</label>
-                                    <input type="email" placeholder="New email">
-                                </section>
-                                <section id="security">
-                                    <label>Update Password</label>
-                                    <input type="password" placeholder="New password">
-                                    <label>2-Step Verification</label>
-                                    <div>
-                                        <input type="checkbox"> Enable 2-step verification
-                                    </div>
-                                </section>
-                                <button id="logout-button">Logout</button>
-                                <button id="close-settings">Close</button>
-                            </div>
- <!-- end ofSETTING PAGE CONTENT (hidden by default)-->
-  <!-- Notification popup container -->
-<div id="notification-popup-container">
-  <!-- Notification popups -->
-<div id="notification-popup-1" style="display: none;">
-  <p id="notification-message-1"></p>
-</div>
-<div id="notification-popup-2" style="display: none;">
-  <p id="notification-message-2"></p>
-</div>
-<div id="notification-popup-3" style="display: none;">
-  <p id="notification-message-3"></p>
-</div>
-<div id="notification-popup-4" style="display: none;">
-  <p id="notification-message-4"></p>
-</div>
-<div id="notification-popup-5" style="display: none;">
-  <p id="notification-message-5"></p>
-</div>
-<div id="notification-popup-6" style="display: none;"></div>
-  <p id="notification-message-6"></p>
-</div>
-<div id="notification-popup-7" style="display: none;">
-  <p id="notification-message-7"></p>
-</div>
-<div id="notification-popup-8" style="display: none;">
-  <p id="notification-message-8"></p>
-</div>
-<div id="notification-popup-9" style="display: none;">
-  <p id="notification-message-9"></p>
-</div>
-<div id="notification-popup-10" style="display: none;">
-  <p id="notification-message-10"></p>
-</div>
-
-
-
-
- <!-- Buy page content -->
-<div id="buy-page" style="display: none;">
-    <h2>Buy Cryptocurrency</h2>
-    
-    <!-- Trusted partners section -->
-    <section id="trusted-partners">
-      <h3>Trusted Partners</h3>
-      
-      <!-- Moon Pay section -->
-      <div class="partner-section">
-        <h4>Moon Pay</h4>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/qhA336CXGo4?si=WVEbmfXilRJXRYOC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <button id="moon-pay-buy">Buy with Moon Pay</button>
-      </div>
-      
-      <!-- Trust Wallet section -->
-      <div class="partner-section">
-        <h4>Trust Wallet</h4>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/hxBUZ7DH1ds?si=kE7QTTwIUUcKER9G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <button id="trust-wallet-buy">Buy with Trust Wallet</button>
-      </div>
-      <button id="close-buy-page">Close</button>
-    <button id="toggle-buy-page">Close</button>
-    </section>
-  </div>
-  <!-- card page content -->
-  <div id="card-page">
-    <div class="card">
-      <h1 class="title">Card</h1>
-      <h2 class="subtitle">Virtual Card</h2>
-      <img src="vitual card.jpg" alt="Image" class="card-image">
-      <h3 class="image-caption">Purchase a Virtual Master Card</h3>
-      <div class="payment-details">
-        <div class="payment-system">
-          <label>Payment System:</label>
-          <input type="text" id="usdt" value="USDT" disabled>
-        </div>
-        <div class="amount">
-          <label>Amount:</label>
-          <input type="number" id="amount" value="$5000" disabled>
-        </div>
-        <button id="send-button">Send</button>
-      </div>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Transactions</a></li>
+            <li><a href="#">Users</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </nav>
+    <!-- Alerts and Notifications -->
+    <div class="alerts">
+        <h2>Notifications</h2>
+        <ul>
+            <li>
+                <span>Visitors:</span>
+                <span id="visitor-count">0</span>
+            </li>
+            <li>
+                <span>New Sign-ups:</span>
+                <span id="new-signups-count">0</span>
+            </li>
+            <li>
+                <span>Total Transactions:</span>
+                <span id="transaction-count">0</span>
+            </li>
+        </ul>
     </div>
-    <button id="close-button">Close</button>
-  </div>
-  
-  
-  
+    <section id="wallet-management">
+        <h2>Wallet Management</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>User ID</th>
+                    <th>Balance</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="wallet-list">
+                <!-- Wallet list will be populated here -->
+            </tbody>
+        </table>
+        <button id="add-funds-btn">Add Funds</button>
+        <button id="remove-funds-btn">Remove Funds</button>
+    </section>
 
-        
-        
-        
-        
-             
-        
+    
+    
+    <!-- Cryptocurrency Section -->
+    <div class="cryptocurrencies">
+        <h2>Cryptocurrencies</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Cryptocurrency</th>
+                    <th>Price (USD)</th>
+                    <th>Balance</th>
+                    <th>Fund User</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bitcoin (BTC)</td>
+                    <td id="btc-price">$0</td>
+                    <td id="btc-balance">0</td>
+                    <td><button class="fund-btn" data-crypto="btc">Fund</button></td>
+                </tr>
+                <tr>
+                    <td>Ethereum (ETH)</td>
+                    <td id="eth-price">$0</td>
+                    <td id="eth-balance">0</td>
+                    <td><button class="fund-btn" data-crypto="eth">Fund</button></td>
+                </tr>
+                <tr>
+                    <td>Litecoin (LTC)</td>
+                    <td id="ltc-price">$0</td>
+                    <td id="ltc-balance">0</td>
+                    <td><button class="fund-btn" data-crypto="ltc">Fund</button></td>
+                </tr>
+                <tr>
+                    <td>Usdt (USDT)</td>
+                    <td id="ltc-price">$0</td>
+                    <td id="ltc-balance">0</td>
+                    <td><button class="fund-btn" data-crypto="usdt">Fund</button></td>
+                </tr>
+                <tr>
+                    <td>Bnb (BNB)</td>
+                    <td id="ltc-price">$0</td>
+                    <td id="ltc-balance">0</td>
+                    <td><button class="fund-btn" data-crypto="bnb">Fund</button></td>
+                </tr>
+                <tr>
+                    <td>Solana (sol)</td>
+                    <td id="ltc-price">$0</td>
+                    <td id="ltc-balance">0</td>
+                    <td><button class="fund-btn" data-crypto="sol">Fund</button></td>
+                </tr>
+                <tr>
+                    <td>Ripple (XRP)</td>
+                    <td id="ltc-price">$0</td>
+                    <td id="ltc-balance">0</td>
+                    <td><button class="fund-btn" data-crypto="xrp">Fund</button></td>
+                </tr>
+                <tr>
+                    <td>Dogecoin (DOGE)</td>
+                    <td id="ltc-price">$0</td>
+                    <td id="ltc-balance">0</td>
+                    <td><button class="fund-btn" data-crypto="doge">Fund</button></td>
+                </tr>
+                <tr>
+                    <td>Avalanche (AVAX)</td>
+                    <td id="ltc-price">$0</td>
+                    <td id="ltc-balance">0</td>
+                    <td><button class="fund-btn" data-crypto="avax">Fund</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- Fund User Modal -->
+    <div class="modal" id="fund-modal">
+        <h2>Fund User</h2>
+        <form>
+            <label for="user-id">User ID:</label>
+            <input type="text" id="user-id" required>
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" required>
+            <label for="crypto-type">Cryptocurrency:</label>
+            <select id="crypto-type">
+                <option value="btc">Bitcoin (BTC)</option>
+                <option value="eth">Ethereum (ETH)</option>
+                <option value="ltc">Litecoin (LTC)</option>
+                <option value="usdt">USDT (USDT)</option>
+                <option value="bnb">BNB (BNB)</option>
+                <option value="sol">Solana (SOL)</option>
+                <option value="xrp">Ripple(XRP)</option>
+                <option value="doge">Dogecoin (DOGE)</option>
+                <option value="avax">Avalanche (AVAX)</option>
+            </select>
+            <button id="fund-btn">Fund</button>
+        </form>
+    </div>
+    <section id="analytics-reporting">
+        <h2>Analytics and Reporting</h2>
+        <div class="metrics">
+            <!-- Key metrics will be displayed here -->
+        </div>
+        <div class="reports">
+            <!-- Reports will be generated and displayed here -->
+        </div>
+    </section>
+    
+    <section id="user-management"></section>
+        <h2>User Management</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="user-list">
+                <!-- User list will be populated here -->
+            </tbody>
+        </table>
+    </section>
+    <section id="notification-system">
+        <h2>Notifications</h2>
+        <ul id="notification-list">
+            <!-- Notifications will be populated here -->
+        </ul>
+    </section>
+    
+    <!-- Transaction History Section -->
+    <div class="transaction-history">
+        <h2>Transaction History</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Transaction ID</th>
+                    <th>User ID</th>
+                    <th>Cryptocurrency</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="transaction-history-body">
+                <!-- Transaction history will be populated here -->
+            </tbody>
+        </table>
+    </div>
+
+    
+
     <script>
-            function toggleAside() {
-  var aside = document.getElementById("aside");
-  if (aside.style.display === "none") {
-    aside.style.display = "block";
-  } else {
-    aside.style.display = "none";
-  }
-}
-/*======== DATE JAVASCRIPT==*/
-document.addEventListener("DOMContentLoaded", function () {
-  const currentDateElement = document.getElementById("current-date");
-  const currentDate = new Date();
-  const day = currentDate.getDate();
-  const month = currentDate.getMonth() + 1; // Months are 0-based
-  const year = currentDate.getFullYear();
-  currentDateElement.innerHTML = `Today's date: ${day}/${month}/${year}`;
+        // Get elements
+const fundModal = document.getElementById('fund-modal');
+const fundBtn = document.getElementById('fund-btn');
+const userIdInput = document.getElementById('user-id');
+const amountInput = document.getElementById('amount');
+const cryptoTypeSelect = document.getElementById('crypto-type');
+
+// Add event listener to fund button
+fundBtn.addEventListener('click', () => {
+    // Get user ID, amount, and cryptocurrency type
+    const userId = userIdInput.value;
+    const amount = amountInput.value;
+    const cryptoType = cryptoTypeSelect.value;
+
+    // Fund user account ( simulate funding )
+    console.log(`Funding user ${userId} with ${amount} ${cryptoType}...`);
+
+    // Close modal
+    fundModal.style.display = 'none';
 });
 
-/*--SETTING PAGE CONTENT (javascript)---*/
-document.getElementById('settings-link').addEventListener('click', function()
-{
-    document.getElementById('settings-page').style.display = 'block';
+// Add event listener to fund buttons in cryptocurrency table
+document.querySelectorAll('.fund-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+        // Open modal
+        fundModal.style.display = 'block';
+        // Set cryptocurrency type
+        cryptoTypeSelect.value = btn.dataset.crypto;
+    });
 });
 
-const settingsButton = document.querySelector('#settings-button');
-const settingsPage = document.querySelector('#settings-page');
-const closeSettingsButton = document.querySelector('#close-settings');
+// Get the metrics and reports elements
+const metricsElement = document.querySelector('.metrics');
+const reportsElement = document.querySelector('.reports');
 
-settingsButton.addEventListener('click', () => {
-  settingsPage.style.display = 'block';
-});
-
-closeSettingsButton.addEventListener('click', () => {
-  settingsPage.style.display = 'none';
-});
-
-/*------- BUY PAGE JAVASCRIPT----- */
-
-const buyButton = document.querySelector('#buy-button');
-const buyPage = document.querySelector('#buy-page');
-const moonPayButton = document.querySelector('#moon-pay-buy');
-const trustWalletButton = document.querySelector('#trust-wallet-buy');
-
-// Add event listener to buy button
-buyButton.addEventListener('click', () => {
-  buyPage.style.display = 'block';
-});
-
-// Add event listeners to partner buttons
-moonPayButton.addEventListener('click', () => {
-  // Redirect to Moon Pay payment gateway
-  window.location.href = '(link unavailable)';
-});
-
-trustWalletButton.addEventListener('click', () => {
-  // Redirect to Trust Wallet payment gateway
-  window.location.href = '(link unavailable)';
-});
-
-const buyPageElement = document.querySelector('#buy-page');
-const closeBuyPageButton = document.querySelector('#close-buy-page');
-const toggleBuyPageButton = document.querySelector('#toggle-buy-page');
-
-closeBuyPageButton.addEventListener('click', () => {
-  buyPageElement.style.display = 'none';
-});
-
-toggleBuyPageButton.addEventListener('click', () => {
-  if (buyPageElement.style.display === 'none') {
-    buyPageElement.style.display = 'block';
-  } else {
-    buyPageElement.style.display = 'none';
-  }
-});
-
-const buyPageModal = document.querySelector('#buy-page');
-const buyLink = document.querySelector('#buy-link');
-
-buyLink.addEventListener('click', (e) => {
-  e.preventDefault(); // Prevent default link behavior
-  buyPageElement.style.display = 'block';
-});
-
-closeBuyPageButton.addEventListener('click', () => {
-  buyPageModal.style.display = 'none';
-});
-
-toggleBuyPageButton.addEventListener('click', () => {
-  if (buyPageModal.style.display === 'none') {
-    buyPageModal.style.display = 'block';
-  } else {
-    buyPageModal.style.display = 'none';
-  }
-});
-
-/*--------- CARD PAGE */
-const openCardPageLink = document.querySelector('#open-card-page');
-const cardPage = document.querySelector('#card-page');
-const closeButton = document.querySelector('#close-button');
-
-openCardPageLink.addEventListener('click', (e) => {
-  e.preventDefault(); // Prevent default link behavior
-  cardPage.style.display = 'block';
-});
-
-closeButton.addEventListener('click', () => {
-  cardPage.style.display = 'none';
-});
-
-/*Notification messages */
-const notifications = [
-  "Someone from Finland withdrew $40,000.",
-  "Someone from Russia deposited $10,000.",
-  "Someone from Sweden transferred $20,000.",
-  "Someone from Kenya deposited $150.",
-  "Someone from Egypt received $3000.",
-  "Someone from France withdrew $40,000.",
-  "Someone from Norway deposited $10,000.",
-  "Someone from Italy transferred $20,000.",
-  "Someone from Switzerland deposited $500."
+// Define key metrics
+const metrics = [
+    { title: 'User Count', value: 1000 },
+    { title: 'Revenue', value: '$10,000' },
+    { title: 'Active Users', value: 500 },
 ];
 
-// Index to keep track of current notification
-let notificationIndex = 0;
-
-// Function to show notifications
-function showNotification() {
-  const notificationPopup = document.getElementById(`notification-popup-${notificationIndex + 1}`);
-  const notificationMessage = document.getElementById(`notification-message-${notificationIndex + 1}`);
-  
-  notificationMessage.innerText = notifications[notificationIndex];
-  notificationPopup.style.display = 'block';
-// Hide notification after 5 seconds
-setTimeout(() => {
-    notificationPopup.style.display = 'none';
-    notificationIndex++;
-    
-    // Show next notification if available
-    if (notificationIndex < notifications.length) {
-      setTimeout(showNotification, 5000);
-    }
-  }, 5000);
-}
-
-// Show first notification after page load
-window.addEventListener('load', () => {
-  showNotification();
+// Populate the metrics section
+metrics.forEach(metric => {
+    const metricElement = document.createElement('div');
+    metricElement.innerHTML = `
+        <h3>${metric.title}</h3>
+        <p>${metric.value}</p>
+    `;
+    metricsElement.appendChild(metricElement);
 });
+// Generate reports
+const generateReport = () => {
+    // Call API to generate report
+    fetch('/api/reports')
+        .then(response => response.json())
+        .then(report => {
+            const reportElement = document.createElement('div');
+            reportElement.innerHTML = `
+                <h3>Report</h3>
+                <p>${report.data}</p>
+            `;
+            reportsElement.appendChild(reportElement);
+        });
+};
+
+// Call generateReport function
+generateReport();
+    </script>
+</body>
+</html>
 
 
-
-</script>
 </body>
 </html>

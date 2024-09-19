@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#card-page {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+  }
+  .card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin: 40px auto;
+    text-align: center;
+  }
+  
+  .title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .subtitle {
+    margin-top: 60px;
+    font-size: 36px;
+    font-weight: bold;
+  }
+  .card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 20px 0;
+  }
+  
+  .image-caption {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .payment-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .payment-system, .amount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .payment-system input, .amount input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+  }
+  
+  #send-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+  }
+  #close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) { /* Tablets and smaller */
+    .card-image {
+      height: 150px;
+      margin: 10px 0;
+    }
+  }
+  
+  @media (max-width: 480px) { /* Mobile phones */
+    .card-image {
+      height: 100px;
+      margin: 5px 0;
+    }
+  }
+  @media (min-width: 1024px) { /* Desktops and larger */
+    .card-image {
+      height: 300px;
+      margin: 30px 0;
+    }
+  }
+  
+  
+            

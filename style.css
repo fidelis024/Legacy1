@@ -1,42 +1,297 @@
+/* POPPINS FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* ROOT CSS VARIABLES */
+:root{
+    --color-white: #ffffff;
+    --color-light: #f0eff5;
+    --color-gray-light: #86848c;
+    --color-gray-dark: #56555e;
+    --color-dark: #272b2f;
+    --color-primary: rgb(71, 7, 234);
+    --color-success: rgb(34, 202, 75);
+    --color-danger: rgb(255, 67, 54);
+    --color-warning: rgb(234, 181, 7);
+    --color-purple: rgb(160, 99, 245);
+    
+    --color-primary-light: rgba(71, 7, 234, 0.2);
+    --color-success-light: rgba(34, 202, 75, 0.2);
+    --color-danger-light: rgba(255, 67, 54, 0.2);
+    --color-purple-light: rgba(160, 99, 245, 0.2);
+
+    --card-padding: 1.6rem;
+    --padding-1: 1rem;
+    --padding-2: 8px;
+
+    --card-border-radius: 1.6rem;
+    --border-radius-1: 1rem;
+    --border-radius-2: 6px;
+}
 *{
     margin: 0;
     padding: 0;
+    outline: 0;
+    border: 0;
+    appearance: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
 }
 body{
-    background-color: #0000;
+    background: var(--color-light);
+    font-family: 'popins', sans-serif;
+    min-height: 100vh;
+    color: black;
 }
-h2{
-    font-weight: bolder;
+.text-muted{
+    color: var(--color-gray-light);
 }
-.form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 columns */
-    gap: 20px;
+.primary{
+    color: var(--color-primary);
+}
+.danger{
+    color: var(--color-danger);
+}
+.success{
+    color: var(--color-success);
+}
+.purple{
+    color: var(--color-purple);
+}
+.bg-primary{
+    background: var(--color-primary);
+    box-shadow: 0.08rem var(--color-primary);
+}
+.bg-danger{
+    background: var(--color-danger);
+}
+.bg-success{
+    background: var(--color-success);
+}
+.bg-purple{
+    background: var(--color-purple);
+}
+.bg-dark{
+    background: var(--color-dark);
+    box-shadow: 0.08rem 0.8rem rgba(0, 0, 0, 0.2);
+}
+.dashboard{
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    background-color: darkslategrey;
+    color: #fff;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-icon{
+    cursor: pointer;
+}
+.company-name {
+    font-weight: bold;
+    font-size: 1.2em;
   }
   
-  .form-grid label {
-    grid-column: 1;
+  .profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  .close-icon {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    cursor: pointer;
+  } 
+  aside {
+    background-color: darkslategrey;
+    color: #fff;
+    padding: 1em;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: ease-in 0.5s;
   }
   
-  .form-grid input,
-  .form-grid select,
-  .form-grid div {
-    grid-column: 2;
+  aside nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
   
-  .form-grid button[type="submit"],
-  .form-grid button[type="button"] {
-    grid-column: 1 / -1; /* Span across both columns */
+  aside nav ul li {
+    padding: 0.5em;
+    border-bottom: 1px solid #fff;
   }
-  .form-grid input[type="text"],
-  .form-grid input[type="number"],
-  .form-grid select {
-    width: 90vw;
+  aside nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 0.5em;
+    position: relative;
+    transition: all 300ms ease;
+  }
+  
+  aside nav ul li a:before {
+    content: " "; /* Font Awesome icon */
+    font-family: FontAwesome;
+    margin-right: 0.5em;
+  }
+  
+  aside nav ul li a:hover {
+    background-color: #555;
+    color: #fff;
+  }
+  
+  aside nav ul li a:hover:before {
+    content: " "; /* Different Font Awesome icon on hover */
+  }
+  aside nav ul li i {
+    margin-right: 0.5em;
+    transition: transform 0.3s;
+  }
+  
+  aside nav ul li i:hover {
+    transform: scale(1.2);
+  }
+      
+  main {
+    flex-grow: 1;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+  }
+  .account-details {
+    background-color: white;
+    padding: 1em;
+    margin-bottom: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .account-balance {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .account-balance button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    cursor: pointer;
+  }
+  .icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .icon-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 70px;
+  }
+  
+  .icon-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .icon-stack span {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .icon-stack h2 {
+    font-size: 16px;
+    margin-top: 0;
+  }
+  
+  
+  .account-info {
+    background-color: white;
+    padding: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .account-info p {
+    margin-bottom: 0.5em;
+  }
+  
+  .account-info span {
+    font-weight: bold;
+  }
+ aside .updates{
+    background: var(--color-dark);
+    border-radius: var(--border-radius-1);
+    text-align: center;
+    padding: var(--card-padding);
+}
+ aside .updates span{
+    font-size: 2.8rem;
+}
+ aside .updates h4{
+    margin: 1rem 0;
+}
+aside .updates a{
+    display: block;
+    width: 100%;
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-radius: var(--border-radius-1);
+    padding: 0.8rem 0;
+    margin-top: 2rem;
+    transition: all 300ms ease;
+}
+aside .updates a:hover{
+    box-shadow: 0 1rem 2rem var(--color-primary-light);
+}
+.cryto-charts-container{
+    width: 100%;
+    height: 400px;
+    padding: 20px;
+}
+/*=====Transaction===*/
+.transaction{
+    width: 100%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+.cryptocurrency-list{
+    margin-top: 20px;
+}
+.cryptocurrency{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
-    box-sizing: border-box;
-  }
-
-.footer-info{
+    border-bottom: 1px solid #ccc;
+}
+.cryptocurrency:last-child{
+    border-bottom: none;
+}
+.left-side{
+    display: flex;
+    align-items: center;
+}
+.left-side img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.right-side{
+    text-align: right;
+}
+footer{
     background-color: darkslategrey;
     padding: 20px;
     text-align: center;
@@ -60,31 +315,47 @@ h2{
     margin-top: 0;
 }
 
-@media (max-width: 480px) {
-    .form-grid input[type="text"],
-    .form-grid input[type="number"],
-    .form-grid select {
-      width: 100%;
-      padding: 5px;
-    }
+.appBottomMenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: darkslategrey;
   }
   
-  @media (max-width: 768px) {
-    .form-grid input[type="text"],
-    .form-grid input[type="number"],
-    .form-grid select {
-      width: 90%;
-      padding: 10px;
-    }
+  .appBottomMenu .item {
+    margin: 10px;
+    flex-basis: calc(25% - 20px); /* adjust the percentage to change the number of columns */
   }
   
-  @media (max-width: 1024px) {
-    .form-grid input[type="text"],
-    .form-grid input[type="number"],
-    .form-grid select {
-      width: 80%;
-      padding: 15px;
-    }
+  .appBottomMenu .col {
+    text-align: center;
   }
+  
+  .appBottomMenu .material-symbols-outlined {
+    font-size: 24px; /* adjust the font size to change the icon size */
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  .appBottomMenu h2 {
+    font-size: 16px; /* adjust the font size to change the text size */
+    margin-top: 0;
+    color: black;
+  }
+  /* Responsive styles */
+@media (max-width: 480px) and (max-width: 350px){ /* Mobile phones */
+  .icon-container {
+    flex-basis: 100%; /* 1 icon per row */
+  }
+}
 
+@media (min-width: 481px) and (max-width: 768px) { /* Tablets */
+  .icon-container {
+    flex-basis: 50%; /* 2 icons per row */
+  }
+}
+
+  
+  
+  
     

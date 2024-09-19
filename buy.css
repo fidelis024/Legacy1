@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#buy-page {
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+  }
+  #buy-page h2 {
+    color: #fff; 
+  }
+  
+  /* Trusted partners section styles */
+  #trusted-partners {
+    background-color: #fff; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .partner-section {
+    margin-bottom: 20px; 
+  }
+  
+  .partner-section h4 {
+    color: #333; 
+  }
+  
+  /* iframe styles */
+  iframe {
+    width: 100%; 
+    height: 315px; 
+    border: none; 
+    border-radius: 10px; 
+  }
+  
+  /* Button styles */
+  #moon-pay-buy, #trust-wallet-buy {
+    background-color: #007bff; 
+    color: #fff; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+  }
+  #moon-pay-buy:hover, #trust-wallet-buy:hover {
+    background-color: #0056b3; 
+  }
+
+  #buy-page {
+    overflow-y: auto; 
+    max-height: 100vh; 
+    overflow-x: hidden; 
+  }
+  
+  #buy-page {
+    padding-right: 15px; 
+  }
+    
+  #close-buy-page {
+    background-color: #007bff; 
+    color: #fff; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+  }
+  
+  #close-buy-page:hover {
+    background-color: #0056b3; 
+  }
+  
+  #toggle-buy-page {
+    background-color: #4CAF50; 
+    color: #fff; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin-left: 10px; 
+  }
+  
+  #toggle-buy-page:hover {
+    background-color: #3e8e41;
+  }
+  

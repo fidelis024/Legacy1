@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Notification popup styles */
+#notification-popup-1, #notification-popup-2, #notification-popup-3, #notification-popup-4, #notification-popup-5 {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+  }
+  
+  #notification-message-1, #notification-message-2, #notification-message-3, #notification-message-4, #notification-message-5 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  
+  

@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h2{
+    text-align: center;
+    text-decoration: none;
+}
+#settings-page{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: lightgray;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 400px;
+}
+#settings-page section{
+    margin-bottom: 20px;
+}
+#settings-page label{
+    display: block;
+    margin-bottom: 10px;
+}
+#settings-page input[type='text'], #settings-page input[type='email'], #settings-page input[type='password']{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#settings-page button{
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#settings-page button:hover{
+    background-color: #3e8e41;
+}
+#settings-page section#notifications span{
+    font-size: 20px;
+    margin-right: 10px;
+    color: #666;
+}
+#settings-page section#notifications span:hover{
+    color: #333;
+}

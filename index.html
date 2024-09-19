@@ -3,102 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About swift-coinvault</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://kit.fontawesome.com/513feb5ba8.js" crossorigin="anonymous"></script>
+    <title>Transfer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 <body>
-    <header>
-    <nav>
-        <ul>
-            <li><a href="#">Swift-Coinvault</a></li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-<main>
-    <section class="hero">
-        <h1>Our Story</h1>
-        <p>Swift-Coinvault was founded by a team of passionate cryptocurrency enthusiasts and industry experts.<br>We saw an opportunity to create a platform that addresses the challenges and limitations of existing cryptocurrency exchanges.<br>With a strong focus on security, user experience, and innovation,we're committed to making Swift-Coinvault the leading cryptocurrency platform.</p>
-    </section>
-    <section class="company-overview">
-        <h2>Company Overview</h2>
-        <p>At Swift-Coinvault,we're revolutionizing the way people buy,sell, and manage cryptocurrencies.</p>
-        <p>Our Mission: Is to provide a secure, user-friendly, and institutions to participate in the digital currency market.</p>
-        <p>Our Vision: We envision a world where cryptocurrency is accessible to everyone, regardless of thier technical expertise or geographical location.</p>
-    </section>
-    <section class="team">
-        <h2>Meet Our Team</h2>
-        <div class="team-member">
-            <img src="team-9.jpg" alt="Team Member 1">
-            <h2>Kenny Doe</h2>
-            <p>Founder & CEO</p>
-        </div>
-        <div class="team-member">
-            <img src="shipman-northcutt-sgZX15Da8YE-unsplash.jpg" alt="Team-Member 2">
-            <h2>Andy Sant</h2>
-            <p>Co-founder & CTO</p>
-          </div>
-          <div class="team-member">
-            <img src="co-founder.jpg" alt="Team-Member 3">
-            <h2>Bob Johnson</h2>
-            <p>Project Manager</p>
-          </div>
-          <div class="team-member">
-            <img src="leadproduct.jpg" alt="Team-Member 4">
-            <h2>Smith Felix</h2>
-            <p>Marketing Officer</p>
-    </section>
-    <section class="history-timeline">
-        <h2>Our History</h2>
-        <div class="timeline-event">
-            <p>2020: Swift-Coinvault founded by Kenny Doe with a vision to revolutionize cryptocurrency trading.</p>
-            <p>2020: Developed and launched our proprietary trading platform,ensuring secure and efficient transactions.</p>
-            <p>2021: Obtained necessary licenses and registrations to operate in 195 of countries.</p>
-            <p>2023: Reached 1000 of registered users, with a 70% monthly growth rate.</p>
-            <p>2023: Successfully integrated 8,985 of cryptocurrencies, providng users with a diverse range of trading options.</p>
-            <p>2023: Established strategic partnerships enhancing our services and offerings.</p>
-            <p>2024: Launched our mobile app, enabling users to trade cryptocurrencies on-the-go.</p>
-            <p>2024: Achieved 50 million registered users solidifying our position as a leading cryptocurrency platform.</p>
-        </div>
-    </section>
-    <section class="contact">
-        <h2>Get In Touch</h2>
-        <p>Swift-Coinvault is headquartered in George Town, 23 Lime Tree Bay Ave, Cayman Islands, and has 60 office locations.</p>
-        <P>Email: <a href="malito:swiftcoinvault@gmail.com">info@Swift-coinvault.com</a></P>
-        <P>Follows us on social media</P>
-        <ul>
-            <li><a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>Twitter</li>
-            <li><a href="https://t.me/Swiftcoinvault" target="_blank"><i class="fa-brands fa-telegram"></i>Telegram</a></li>
-            <li><a href="#" target="_blank"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
-            <li><a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></i>Linkedin</a></li>
-        </ul>
-    </section>
-</main>
+    <h2>Transfer</h2>
+    <br>
+    <form>
+        <div class="form-grid">
+        <label for="transfer-type">Transfer Type:</label>
+        <div>
+        <input type="text" id="transfer-type" placeholder="Select..." readonly>
+        <div id="transfer-type-options" style="display: none;">
+        <p>External Transfer</p>
+        <P>Internal Transfer</P>
+    </div>
+    </div>
+
+    <label for="medium">Medium:</label>
+    <div>
+    <select id="medium">
+        <option value="">Select a cryptocurrency</option>
+        <option value="BTC">Bitcoin (BTC)</option>
+        <option value="ETH">Ethereum (ETH)</option>
+        <option value="USDT">USDT (USDT)</option>
+        <option value="LTC">Litecoin (LTC)</option>
+        <option value="BNB">BNB (BNB)</option>
+        <option value="SOL">Solana (SOL)</option>
+        <option value="XRP">Ripple(XRP)</option>
+        <option value="DOGE">Dogecoin (DOGE)</option>
+        <option value="AVAX">Avalanche (AVAX)</option>
+    </select>
+</div>
+
+    <label for="wallet-address">Wallet Address</label>
+    <div>
+    <input type="text" id="wallet-address" placeholder="Enter wallet address...">
+</div>
+
+    <label for="amount">Amount:</label>
+    <div>
+    <input type="number" id="amount" placeholder="Enter amount...">
+</div>
+<br>
+<br>
+   <div>
+    <button type="submit" style="background-color: #4CAF50; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: bold;">Submit</button>
+    <button type="button" style="background-color: #ccc; color: #333; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: bold;">Cancel</button>
+</div>
+</div>
+</form>
+<br>
+<br>
+<br>
+<br>
 <footer>
-    <h2>Copyright</h2>
-    <p>&copy; 2024 Swift-Coinvault. All rights reserved.</p>
-    <h2>Privacy Policy</h2>
-    <P>We collect personal data to improve our services and user experience.<br>We use cookies to track website useage and IP addresses for security purposes.<br>We will not share your data with third parties without your consent.<br>For more information, contact us at Privacy@swift-coinvault.com</P>
-    <h2>Terms of Service</h2>
-    <p>Swift-Coinvault Terms of Service...</p>
-    <h3>Acceptance Use</h3>
-    <p>You agree to:</p>
-    <ul>
-        <li>Use our services for lawful purposes only.</li>
-        <li>Not engage in prohibited activities,such as hacking or spamming.</li>
-        <li>Not infringe on intellectual property rights.</li>
-    </ul>
-    <h3>Prohibited Activities</h3>
-    <p>You must not</p>
-    <ul>
-        <li>Attempt to gain unauthorized access to our services.</li>
-        <li>Disrupt or interfere with our services.</li>
-        <li>Use our services to engage in malicious activities.</li>
-    </ul>
+    <div class="footer-info">
+        <h2>Copyright 2024 Swift-Coinvault</h2>
+        <p>All rights reserved.</p>
+        <p>Todays date: <span id="current-date"></span></p>
+    </div>
 </footer>
+    <script>
+        const transferTypeInput = document.getElementById('transfer-type');
+const transferTypeOptions = document.getElementById('transfer-type-options');
+
+transferTypeInput.addEventListener('click', () => {
+  transferTypeOptions.style.display = 'block';
+});
+
+transferTypeOptions.addEventListener('click', (e) => {
+  if (e.target.tagName === 'P') {
+    transferTypeInput.value = e.target.textContent;
+    transferTypeOptions.style.display = 'none';
+  }
+});
+
+
+/*======== DATE JAVASCRIPT==*/
+document.addEventListener("DOMContentLoaded", function () {
+  const currentDateElement = document.getElementById("current-date");
+  const currentDate = new Date();
+  const day = currentDate.getDate();
+  const month = currentDate.getMonth() + 1; // Months are 0-based
+  const year = currentDate.getFullYear();
+  currentDateElement.innerHTML = `Today's date: ${day}/${month}/${year}`;
+});
+
+    </script>
 </body>
 </html>

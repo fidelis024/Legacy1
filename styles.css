@@ -1,0 +1,128 @@
+/* POPPINS FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    line-height: 1.6;
+    color: #333;
+    background-color: #f7f7f7;
+}
+/*Header style*/
+header{
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+header nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+header nav li{
+    height: 50px;
+}
+header nav a{
+    height: 80%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    transition: color 0.2s ease;
+}
+header nav a:hover {
+    color: #ccc;
+}
+header nav li:first-child {
+    margin-right: auto;
+  }
+  /* Main style */
+  main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+  }
+  section{
+    background-color: #fff;
+    padding: 2em;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  h1,h2{
+    color: #333;
+    margin-bottom: 10px;
+  }
+  /* company overview*/
+.company-overview{
+    background-color: #f7f7f7;
+    padding: 2em;
+}
+.company-overview h2{
+    margin-bottom: 10px;
+}
+.company-overview p{
+    margin-bottom: 20px;
+}
+.company-overview p:last-child{
+    margin-bottom: 0;
+}
+/* team member stlyle*/
+.team-member{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.team-member img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+/* Footer stlye */
+footer{
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    clear: both;
+}
+/* media queries */
+@media (max-width: 768px) {
+    main {
+        padding: 1em;
+    }
+    section {
+        padding: 1em;
+    }
+    .hero {
+        padding: 1em;
+    }
+    .company-overview{
+        padding: 1em;
+    }
+    .team-member{
+        flex-direction: column;
+        align-items: center;
+    }
+    .team-member img{
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 480px) {
+    header nav ul{
+        flex-direction: column;
+    }
+    header nav li{
+        margin-bottom: 10px;
+    }
+}

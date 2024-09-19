@@ -1,148 +1,104 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About swift-coinvault</title>
+    <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
-    <title>Swift-coinvault | Login & Registration</title>
+    <script src="https://kit.fontawesome.com/513feb5ba8.js" crossorigin="anonymous"></script>
 </head>
 <body>
- <div class="wrapper">
-    <nav class="nav">
-        <div class="nav-logo">
-            <p>Swift-coinvault</p>
-        </div>
-        <div class="nav-menu" id="navMenu">
-            <ul>
-                <li><a href="#" class="link active">Home</a></li>
-                <li><a href="#" class="link">Services</a></li>
-                <li><a href="#" class="link">About</a></li>
-            </ul>
-        </div>
-        <div class="nav-button">
-            <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
-            <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
-        </div>
-        <div class="nav-menu-btn">
-            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
-        </div>
+    <header>
+    <nav>
+        <ul>
+            <li><a href="#">Swift-Coinvault</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
     </nav>
-
-<!----------------------------- Form box ----------------------------------->    
-    <div class="form-box">
-        
-        <!------------------- login form -------------------------->
-
-        <div class="login-container" id="login">
-            <div class="top">
-                <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
-                <header>Login</header>
-            </div>
-            <div class="input-box">
-                <input type="text" class="input-field" placeholder="Username or Email">
-                <i class="bx bx-user"></i>
-            </div>
-            <div class="input-box">
-                <input type="password" class="input-field" placeholder="Password">
-                <i class="bx bx-lock-alt"></i>
-            </div>
-            <div class="input-box">
-                <input type="submit" class="submit" value="Sign In">
-            </div>
-            <div class="two-col">
-                <div class="one">
-                    <input type="checkbox" id="login-check">
-                    <label for="login-check"> Remember Me</label>
-                </div>
-                <div class="two">
-                    <label><a href="#">Forgot password?</a></label>
-                </div>
-            </div>
+</header>
+<main>
+    <section class="hero">
+        <h1>Our Story</h1>
+        <p>Swift-Coinvault was founded by a team of passionate cryptocurrency enthusiasts and industry experts.<br>We saw an opportunity to create a platform that addresses the challenges and limitations of existing cryptocurrency exchanges.<br>With a strong focus on security, user experience, and innovation,we're committed to making Swift-Coinvault the leading cryptocurrency platform.</p>
+    </section>
+    <section class="company-overview">
+        <h2>Company Overview</h2>
+        <p>At Swift-Coinvault,we're revolutionizing the way people buy,sell, and manage cryptocurrencies.</p>
+        <p>Our Mission: Is to provide a secure, user-friendly, and institutions to participate in the digital currency market.</p>
+        <p>Our Vision: We envision a world where cryptocurrency is accessible to everyone, regardless of thier technical expertise or geographical location.</p>
+    </section>
+    <section class="team">
+        <h2>Meet Our Team</h2>
+        <div class="team-member">
+            <img src="team-9.jpg" alt="Team Member 1">
+            <h2>Kenny Doe</h2>
+            <p>Founder & CEO</p>
         </div>
-
-        <!------------------- registration form -------------------------->
-        <div class="register-container" id="register">
-            <div class="top">
-                <span>Have an account? <a href="#" onclick="login()">Login</a></span>
-                <header>Sign Up</header>
-            </div>
-            <div class="two-forms">
-                <div class="input-box">
-                    <input type="text" class="input-field" placeholder="Firstname">
-                    <i class="bx bx-user"></i>
-                </div>
-                <div class="input-box">
-                    <input type="text" class="input-field" placeholder="Lastname">
-                    <i class="bx bx-user"></i>
-                </div>
-            </div>
-            <div class="input-box">
-                <input type="text" class="input-field" placeholder="Email">
-                <i class="bx bx-envelope"></i>
-            </div>
-            <div class="input-box">
-                <input type="password" class="input-field" placeholder="Password">
-                <i class="bx bx-lock-alt"></i>
-            </div>
-            <div class="input-box">
-                <input type="submit" class="submit" value="Register">
-            </div>
-            <div class="two-col">
-                <div class="one">
-                    <input type="checkbox" id="register-check">
-                    <label for="register-check"> Remember Me</label>
-                </div>
-                <div class="two">
-                    <label><a href="#">Terms & conditions</a></label>
-                </div>
-            </div>
+        <div class="team-member">
+            <img src="shipman-northcutt-sgZX15Da8YE-unsplash.jpg" alt="Team-Member 2">
+            <h2>Andy Sant</h2>
+            <p>Co-founder & CTO</p>
+          </div>
+          <div class="team-member">
+            <img src="co-founder.jpg" alt="Team-Member 3">
+            <h2>Bob Johnson</h2>
+            <p>Project Manager</p>
+          </div>
+          <div class="team-member">
+            <img src="leadproduct.jpg" alt="Team-Member 4">
+            <h2>Smith Felix</h2>
+            <p>Marketing Officer</p>
+    </section>
+    <section class="history-timeline">
+        <h2>Our History</h2>
+        <div class="timeline-event">
+            <p>2020: Swift-Coinvault founded by Kenny Doe with a vision to revolutionize cryptocurrency trading.</p>
+            <p>2020: Developed and launched our proprietary trading platform,ensuring secure and efficient transactions.</p>
+            <p>2021: Obtained necessary licenses and registrations to operate in 195 of countries.</p>
+            <p>2023: Reached 1000 of registered users, with a 70% monthly growth rate.</p>
+            <p>2023: Successfully integrated 8,985 of cryptocurrencies, providng users with a diverse range of trading options.</p>
+            <p>2023: Established strategic partnerships enhancing our services and offerings.</p>
+            <p>2024: Launched our mobile app, enabling users to trade cryptocurrencies on-the-go.</p>
+            <p>2024: Achieved 50 million registered users solidifying our position as a leading cryptocurrency platform.</p>
         </div>
-    </div>
-</div>   
-
-
-<script>
-   
-   function myMenuFunction() {
-    var i = document.getElementById("navMenu");
-
-    if(i.className === "nav-menu") {
-        i.className += " responsive";
-    } else {
-        i.className = "nav-menu";
-    }
-   }
- 
-</script>
-
-<script>
-
-    var a = document.getElementById("loginBtn");
-    var b = document.getElementById("registerBtn");
-    var x = document.getElementById("login");
-    var y = document.getElementById("register");
-
-    function login() {
-        x.style.left = "4px";
-        y.style.right = "-520px";
-        a.className += " white-btn";
-        b.className = "btn";
-        x.style.opacity = 1;
-        y.style.opacity = 0;
-    }
-
-    function register() {
-        x.style.left = "-510px";
-        y.style.right = "5px";
-        a.className = "btn";
-        b.className += " white-btn";
-        x.style.opacity = 0;
-        y.style.opacity = 1;
-    }
-
-</script>
-
+    </section>
+    <section class="contact">
+        <h2>Get In Touch</h2>
+        <p>Swift-Coinvault is headquartered in George Town, 23 Lime Tree Bay Ave, Cayman Islands, and has 60 office locations.</p>
+        <P>Email: <a href="malito:swiftcoinvault@gmail.com">info@Swift-coinvault.com</a></P>
+        <P>Follows us on social media</P>
+        <ul>
+            <li><a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>Twitter</li>
+            <li><a href="https://t.me/Swiftcoinvault" target="_blank"><i class="fa-brands fa-telegram"></i>Telegram</a></li>
+            <li><a href="#" target="_blank"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+            <li><a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></i>Linkedin</a></li>
+        </ul>
+    </section>
+</main>
+<footer>
+    <h2>Copyright</h2>
+    <p>&copy; 2024 Swift-Coinvault. All rights reserved.</p>
+    <h2>Privacy Policy</h2>
+    <P>We collect personal data to improve our services and user experience.<br>We use cookies to track website useage and IP addresses for security purposes.<br>We will not share your data with third parties without your consent.<br>For more information, contact us at Privacy@swift-coinvault.com</P>
+    <h2>Terms of Service</h2>
+    <p>Swift-Coinvault Terms of Service...</p>
+    <h3>Acceptance Use</h3>
+    <p>You agree to:</p>
+    <ul>
+        <li>Use our services for lawful purposes only.</li>
+        <li>Not engage in prohibited activities,such as hacking or spamming.</li>
+        <li>Not infringe on intellectual property rights.</li>
+    </ul>
+    <h3>Prohibited Activities</h3>
+    <p>You must not</p>
+    <ul>
+        <li>Attempt to gain unauthorized access to our services.</li>
+        <li>Disrupt or interfere with our services.</li>
+        <li>Use our services to engage in malicious activities.</li>
+    </ul>
+</footer>
 </body>
 </html>
